@@ -8,11 +8,11 @@ class ProdutoRepository {
     return novoProduto;
   }
 
-  async deletar(id: string): Promise<boolean> {
-    await ProdutoModel.findByIdAndDelete(id);
+  // async deletar(id: string): Promise<boolean> {
+  //   await ProdutoModel.findByIdAndDelete(id);
 
-    return true;
-  }
+  //   return true;
+  // }
 
   async encontrarTodos(): Promise<Produto[]> {
     const produtos = await ProdutoModel.find<Produto>();
@@ -20,15 +20,14 @@ class ProdutoRepository {
     return produtos;
   }
 
-  async encontrarID(id: string): Promise<Produto | null> {
-    const produto = await ProdutoModel.findOne({ id });
+  // async encontrarID(id: string): Promise<Produto | null> {
+  //   const produto = await ProdutoModel.findOne({ id });
 
-    return produto;
-  }
+  //   return produto;
+  // }
 
   async encontrarCPF(cpf: string): Promise<Produto | null> {
     const produto = await ProdutoModel.findOne({ cpf });
-
     return produto;
   }
 }

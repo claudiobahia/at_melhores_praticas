@@ -1,9 +1,6 @@
 import { debug } from 'console';
 import ProdutoModel from '../../infra/models/ProdutoModel';
-import { IProduto } from '../entities/IProduto';
-import { Produto } from '../entities/Produto';
 import { ProdutoRepository } from '../repo/ProdutoRepository';
-import { CPF } from '../ValueObject/CPF';
 import { IProdutoRequestDTO, IProdutoService } from './IProdutoService';
 
 export class ProdutoService implements IProdutoService {
